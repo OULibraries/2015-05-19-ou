@@ -13,7 +13,7 @@ enddate: 2015-05-20
 instructor: ["Jonah Duckles", "Logan Cox"]
 helper: ["Mark Laufersweiler", "Mark Stacy"]
 contact: jduckles@ou.edu
-etherpad:  https://etherpad.mozilla.org/2015-05-19-ou 
+etherpad:  https://etherpad.mozilla.org/2015-05-19-ou
 eventbrite: 16144220799
 ---
 <!--
@@ -288,11 +288,14 @@ eventbrite: 16144220799
 <h2 id="setup">Setup</h2>
 
 <p>
+  To participate in a Software Carpentry workshop, you will need
+  access to the software described below. In addition, you will
+  need an up-to-date web browser.
   <a href="setup/index.html">This page</a> has instructions on testing
   that you have the right software installed.
 </p>
 
-<div> <!-- Start of 'editor' section. -->
+<div id="editor"> <!-- Start of 'editor' section. -->
   <h3>Text Editor</h3>
 
   <p>
@@ -307,7 +310,7 @@ eventbrite: 16144220799
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="editor-windows">Windows</h4>
       <p>
 	<code>nano</code> is the editor installed by the Software
 	Carpentry Installer, it is a basic editor integrated into the
@@ -323,7 +326,7 @@ eventbrite: 16144220799
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="editor-macosx">Mac OS X</h4>
       <p>
 	We recommend
 	<a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
@@ -333,7 +336,7 @@ eventbrite: 16144220799
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="editor-linux">Linux</h4>
       <p>
 	<a href="http://kate-editor.org/">Kate</a> is one option for
 	Linux users.  In a pinch, you can use <code>nano</code>, which
@@ -343,7 +346,7 @@ eventbrite: 16144220799
   </div>
 </div> <!-- End of 'editor' section. -->
 
-<div> <!-- Start of 'shell' section. -->
+<div id="shell"> <!-- Start of 'shell' section. -->
   <h3>The Bash Shell</h3>
 
   <p>
@@ -353,31 +356,27 @@ eventbrite: 16144220799
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="shell-windows">Windows</h4>
       <p>
-	Install Git for Windows by download and running
+	Install Git for Windows by downloading and running
 	<a href="http://msysgit.github.io/">the installer</a>.
 	This will provide you with both Git and Bash in the Git Bash program.
       </p>
-      <h4>Software Carpentry Installer</h4>
+      <h4>Software Carpentry Windows Installer</h4>
+      <p>It installs and configures <code>nano</code> (<a href="{{site.swc_github}}/windows-installer">Among other things</a>)</p>
       <p><em>This installer requires an active internet connection.</em></p>
-      <p>After Git Bash:</p>
+      <p>After installing Git Bash:</p>
       <ul>
 	<li>
-          Download the <a href="{{site.swc_installer}}">installer</a>.
+          Download the <a href="{{site.swc_installer}}">Software Carpentry Windows installer</a>.
 	</li>
 	<li>
           Double click on the file to run it.
 	</li>
       </ul>
-      <p>
-	Information about the SWC Windows Installer,
-	including the source code, can be found at
-	<a href="https://github.com/swcarpentry/windows-installer">https://github.com/swcarpentry/windows-installer</a>.
-      </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="shell-macosx">Mac OS X</h4>
       <p>
 	The default shell in all versions of Mac OS X is bash, so no
 	need to install anything.  You access bash from the Terminal
@@ -387,7 +386,7 @@ eventbrite: 16144220799
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="shell-linux">Linux</h4>
       <p>
 	The default shell is usually <code>bash</code>, but if your
 	machine is set up differently you can run it by opening a
@@ -398,31 +397,35 @@ eventbrite: 16144220799
   </div>
 <div> <!-- End of 'shell' section. -->
 
-<div> <!-- Start of 'Git' section. -->
+<div id='git'> <!-- Start of 'Git' section. GitHub browser compatability
+           is given at https://help.github.com/articles/supported-browsers/-->
   <h3>Git</h3>
 
   <p>
     Git is a version control system that lets you track who made changes
     to what when and has options for easily updating a shared or public
     version of your code
-    on <a href="https://github.com/">github.com</a>.
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
+    web browser (current versions of Chrome, Firefox or Safari,
+    or Internet Explorer version 9 or above).
   </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="git-windows">Windows</h4>
       <p>
 	Git should be installed on your computer as part of your Bash
 	install (described above).
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="git-macosx">Mac OS X</h4>
       <p>
 	<strong>For OS X 10.8 and higher</strong>, install Git for Mac
 	by downloading and running
 	<a href="http://sourceforge.net/projects/git-osx-installer/files/latest/download">the installer</a>.
-	After installing Git, there will not be anything in your <code>/Applications</code> folder, 
+	After installing Git, there will not be anything in your <code>/Applications</code> folder,
 	as Git is a command line program.
 	<strong>For older versions of OS X (10.5-10.7)</strong> use the
 	most recent available installer for your
@@ -432,7 +435,7 @@ eventbrite: 16144220799
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="git-linux">Linux</h4>
       <p>
 	If Git is not already available on your machine you can try to
 	install it via your distro's package manager. For Debian/Ubuntu run
@@ -443,7 +446,10 @@ eventbrite: 16144220799
   </div>
 </div> <!-- End of 'Git' section. -->
 
-<div> <!-- Start of 'Python' section. -->
+<div id="python"> <!-- Start of 'Python' section. Remove the third paragraph if
+           the workshop will teach Python using something other than
+           the IPython notebook.
+           Details at http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility -->
   <h3>Python</h3>
 
   <p>
@@ -460,9 +466,19 @@ eventbrite: 16144220799
       Python 3 introduced changes that will break some of the code we teach during the workshop.
     </p>
 
+    <p>
+      We will teach Python using the IPython notebook, a programming environment
+      that runs in a web browser. For this to work you will need a reasonably
+      up-to-date browser. The current versions of the Chrome, Safari and
+      Firefox browsers are all <a
+      href='http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility'>supported</a>
+      (some older browsers, including Internet Explorer version 9
+      and below, are not).
+    </p>
+
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="python-windows">Windows</h4>
       <ul>
 	<li>
           Download and
@@ -477,7 +493,7 @@ eventbrite: 16144220799
       </ul>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="python-macosx">Mac OS X</h4>
       <ul>
 	<li>
           Download and
@@ -490,7 +506,7 @@ eventbrite: 16144220799
       </ul>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="python-linux">Linux</h4>
       <p>
 	We recommend the all-in-one scientific Python installer
 	<a href="http://continuum.io/downloads.html">Anaconda</a>.
@@ -503,7 +519,7 @@ eventbrite: 16144220799
 	<li>
           Download the installer that matches your operating
           system and save it in your home folder.
-	  Download the default Python 2 installer (do not follow the link to version 3). 
+	  Download the default Python 2 installer (do not follow the link to version 3).
 	</li>
 	<li>
           Open a terminal window.
@@ -527,8 +543,8 @@ eventbrite: 16144220799
   </div>
 </div> <!-- End of 'Python' section. -->
 
-<!-- Start of 'R' section. 
-<div> 
+<!-- Start of 'R' section.
+<div>
   <h3>R</h3>
 
   <p>
@@ -540,7 +556,7 @@ eventbrite: 16144220799
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="r-windows">Windows</h4>
       <p>
 	Install R by downloading and running
 	<a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
@@ -550,7 +566,7 @@ eventbrite: 16144220799
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="r-macosx">Mac OS X</h4>
       <p>
 	Install R by downloading and running
 	<a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
@@ -560,7 +576,7 @@ eventbrite: 16144220799
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="r-linux">Linux</h4>
       <p>
 	You can download the binary files for your distribution
 	from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
@@ -575,7 +591,7 @@ eventbrite: 16144220799
 -->
 <!-- End of 'R' section. -->
 
-<div> <!-- Start of 'SQLite' section. -->
+<div id="sql"> <!-- Start of 'SQLite' section. -->
   <h3>SQLite</h3>
 
   <p>
@@ -586,7 +602,7 @@ eventbrite: 16144220799
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="sql-windows">Windows</h4>
       <p>
 	Download the <a href="{{site.swc_files}}/sqlite3.exe">sqlite3
 	  program</a> and put it in the directory where you are running
@@ -594,13 +610,13 @@ eventbrite: 16144220799
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="sql-macosx">Mac OS X</h4>
       <p>
 	<code>sqlite3</code> comes pre-installed on Mac OS X.
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="sql-linux">Linux</h4>
       <p>
 	<code>sqlite3</code> comes pre-installed on Linux.
       </p>
@@ -611,7 +627,7 @@ eventbrite: 16144220799
 <!--
   Uncomment this section if you are using our virtual machine.
 
-<div>
+<div id="vm">
   <h3>Virtual Machine</h3>
 
   <p>
